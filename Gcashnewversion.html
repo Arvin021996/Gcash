@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>GCash</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #007cff;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            width: 200px;
+            margin-bottom: 40px;
+        }
+        
+        .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .input-container input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .input-container span {
+            padding: 10px;
+            border-right: 1px solid #007cff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .info-text {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .next-button {
+            background-color: #fff;
+            color: #007cff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .next-button:hover {
+            background-color: #007cff;
+            color: #fff;
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/assets/images/gcash.png" alt="gcash" class="logo">
+        <div class="input-container">
+            <span>+63</span>
+            <input pattern="[0-9]*" type="tel" maxLength="12" placeholder="Enter your mobile number" required>
+        </div>
+        <span class="info-text">Available for all networks!</span>
+        <p class="info-text">By tapping next, we'll collect your mobile number's network information to be able to send you a One-Time Password (OTP).</p>
+        <a class="next-button" href="/auth/otp">Next</a>
+    </div>
+    <div class="footer">
+        <a href="/#">Help Center</a>
+        <span>v5.56.0:595</span>
+    </div>
+</body>
+</html>
